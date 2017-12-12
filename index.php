@@ -20,7 +20,7 @@ if($method = "POST"){
 			break;
 
 		default:
-			$speech = "je n'ai pas compris votre demande...";
+			$speech = "je n'ai pas compris votre demande !!!!!";
 			break;
 	}
 
