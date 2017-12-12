@@ -7,7 +7,6 @@ if($method = "POST"){
 	$json = json_decode($requestBody, true);
 var_dump($json);
 	$text = $json->result->action;
-var_dump($text);
 	switch ($text) {
 		case 'coucou':
 			$speech = "coucou mon ami";
