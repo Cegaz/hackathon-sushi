@@ -8,9 +8,6 @@ if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody, true);
 
-	$action = $json["result"]["action"];
-	$parameters = $json["result"]["parameters"];
-
 	$text = $json->result->parameters->text;
 
 	switch ($text) {
