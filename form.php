@@ -1,10 +1,11 @@
 <?php
-header('Content-Type: application/json');
-ob_start();
 
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method = "POST"){
+	header('Content-Type: application/json');
+	ob_start();
+
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody, true);
 
