@@ -6,24 +6,25 @@ if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->action;
+	$text = $json->result->parameters->text;
+
 	switch ($text) {
-		case 'coucou':
-			$speech = "coucou mon ami";
+		case 'chocolat':
+			$speech = "j'adore le chocolat !!";
 			break;
 		
-		case 'tchao':
-			$speech = "tchao mon pote";
+		case 'café':
+			$speech = "j'aime pas le café...";
 			break;
 
 		default:
-			$speech = "je n'ai pas compris votre demande !!!!!";
+			$speech = "je n'ai pas compris votre demande :(";
 			break;
 	}
 
 	$response = new \stdClass();
-	$response->speech = $speech;
-	$response->displayText = $speech;
+	$response->speech = "";
+	$response->displayText = "";
 	$response->source = "webhook";
 	echo json_encode($response);
 }
