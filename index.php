@@ -1,9 +1,9 @@
 <?php
 
 $method = $_SERVER['REQUEST_METHOD'];
-//php://input
+
 if($method = "POST"){
-	$requestBody = file_get_contents('test.json');
+	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
