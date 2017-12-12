@@ -1,6 +1,4 @@
 <?php
-header('Content-Type: application/json');
-ob_start();
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -28,7 +26,6 @@ var_dump($text);
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
-	ob_end_clean();
 	echo json_encode($response);
 }
 else {
