@@ -5,7 +5,7 @@ ob_start();
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method = "POST"){
-	$requestBody = file_get_contents('php://input');
+	$requestBody = file_get_contents('test.json');
 	$json = json_decode($requestBody, true);
 
 	$text = $json->result->parameters->text;
