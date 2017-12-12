@@ -3,9 +3,9 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method = "POST"){
-	$requestBody = file_get_contents('test.json');
-	$json = json_decode($requestBody, true);
-var_dump($json);
+	$requestBody = file_get_contents('php://input');
+	$json = json_decode($requestBody);
+
 	$text = $json->result->action;
 	switch ($text) {
 		case 'coucou':
@@ -17,7 +17,7 @@ var_dump($json);
 			break;
 
 		default:
-			$speech = "je n'ai pas compris votre demande !!lkjh!!!";
+			$speech = "je n'ai pas compris votre demande !!!!!";
 			break;
 	}
 
