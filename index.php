@@ -5,6 +5,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method = "POST"){
 	$requestBody = file_get_contents('test.json');
 	$json = json_decode($requestBody);
+	var_dump($json);
 
 	$text = $json->result->parameters->text;
 
