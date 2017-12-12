@@ -3,10 +3,8 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method = "POST"){
-	ob_start();
-
 	$requestBody = file_get_contents('php://input');
-	$json = json_decode($requestBody, true);
+	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
 
@@ -28,7 +26,6 @@ if($method = "POST"){
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
-	ob_end_clean();
 	echo json_encode($response);
 }
 else {
