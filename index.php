@@ -7,9 +7,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method = "POST"){
 	$requestBody = file_get_contents('test.json');
 	$json = json_decode($requestBody, true);
-
-	$text = $json->result->parameters->text;
-
+var_dump($json);
+	$text = $json->result->action;
+var_dump($text);
 	switch ($text) {
 		case 'coucou':
 			$speech = "coucou mon ami";
