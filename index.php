@@ -1,10 +1,12 @@
 <?php
+header('Content-Type: application/json');
+ob_start();
 
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
-	$json = json_decode($requestBody);
+	$json = json_decode($requestBody, true);
 
 	$text = $json->result->parameters->text;
 
@@ -26,6 +28,7 @@ if($method = "POST"){
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
+	ob_end_clean();
 	echo json_encode($response);
 }
 else {
