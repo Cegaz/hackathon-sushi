@@ -1,8 +1,6 @@
 <?php
 
-echo 'hello sushi world';
-
-/*$method = $_SERVER['REQUEST_METHOD'];
+$method = $_SERVER['REQUEST_METHOD'];
 
 if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
@@ -32,4 +30,4 @@ if($method = "POST"){
 }
 else {
 	echo "Méthode non autorisée.";
-}*/
+}
