@@ -1,6 +1,6 @@
 	<?
 
-	$oui_non = $json->result->parameters->oui_non;
+	$oui_non = $json->result->parameters->{'oui_non'};
 
 	switch ($oui_non) {
 		case 'oui':
