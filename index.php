@@ -18,6 +18,10 @@ if($method = "POST"){
 		include('gouts.php');
 	}
 
+	/*if(isset($json->result->parameters->{'confirmation'})) {
+		include('gouts.php');
+	}*/
+
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
