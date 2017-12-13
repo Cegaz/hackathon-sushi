@@ -6,20 +6,12 @@ if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->parameters->text;
+	$commande['poisson'] = $json->result->parameters->poisson;
+	$commande['accompagnement'] = $json->result->parameters->accompagnement;
+	$commande['sauce'] = $json->result->parameters->sauce;
+	$commande['type'] = $json->result->parameters->type;
 
-	switch ($text) {
-		case 'chocolat':
-			$speech = "j'adore le chocolat !!";
-			break;
-		
-		case 'café':
-			$speech = "j'aime pas le café...";
-			break;
-
-		default:
-			$speech = "je n'ai pas compris votre demande :(";
-			break;
+	$speech = "j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
 	}
 
 	$oui_non = $json->result->parameters->oui_non;
@@ -41,6 +33,8 @@ if($method = "POST"){
 			$speech = "je n'ai pas compris votre demande";
 			break;
 	}
+
+	$
 
 	$response = new \stdClass();
 	$response->speech = $speech;
