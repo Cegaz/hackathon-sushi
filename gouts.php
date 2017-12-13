@@ -17,12 +17,13 @@
 		} else {
 			$proposition = 'la Sushi Box Super Mix (https://www.sushishop.fr/fr/livraison/plateaux/super-mix-1047)';
 		}
-	} else{
+	} else {
 		if($nouveaute == 'oui') {
 			$proposition = 'notre nouveauté 2017 : Sushi Black Pepper (https://www.sushishop.fr/fr/livraison/sushi/black-pepper-64)';
 		} else {
 			$proposition = 'notre classique : le sushi saumon';
 		}
+	}
 
 	if($epice == 'oui') {
 		$proposition .= ', avec un supplément Wasabi Peas';
