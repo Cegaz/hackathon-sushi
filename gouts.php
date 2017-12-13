@@ -26,7 +26,7 @@
 	}
 
 	if($epice == 'oui') {
-		$proposition .= ', avec un supplément Wasabi Peas';
+		$proposition .= ', avec un supplément Wasabi Peas.';
 	}
 
-	$speech .= $proposition . "Est-ce que cela vous correspond ?";
+	$speech .= $proposition . " Est-ce que cela vous correspond ?";
