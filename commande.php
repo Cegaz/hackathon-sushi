@@ -7,14 +7,17 @@ $accompagnement = $json->result->parameters->{'accompagnement'};
 $sauce = $json->result->parameters->{'sauce'};
 $type = $json->result->parameters->{'type'};
 
-
-$sql_up = "UPDATE commande SET 
-poisson = :poisson, 
-accompagnement = :accompagnement, 
-sauce = :sauce, 
-type = :type
-WHERE id = :id";
-$prep = $pdo->prepare($sql_up);
-$prep->execute([':id'=>1,':poisson'=> $poisson, ':accompagnement'=>$accompagnement, ':sauce'=>$sauce, ':type'=>$type]);
-
 $speech = "j'ai bien noté votre commande : vous voulez des " . $type . " de ". $poisson . " avec du " . $accompagnement . ", sauce " . $sauce . " : c'est bien cela ?";
+
+if(isset($speech)) {
+    $sql_up = "UPDATE commande SET 
+                poisson = :poisson, 
+                accompagnement = :accompagnement, 
+                sauce = :sauce, 
+                type = :type
+                WHERE id = :id";
+
+    $id = 1;
+    $prep = $pdo->prepare($sql_up);
+    $prep->execute([':id' => $id, ':poisson' => $poisson, ':accompagnement' => $accompagnement, ':sauce' => $sauce, ':type' => $type]);
+}
