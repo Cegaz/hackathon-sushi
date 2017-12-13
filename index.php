@@ -10,14 +10,14 @@ if($method = "POST"){
 		include('oui_non.php');
 	}
 
-/*	if(isset($json->result->parameters->{'poisson'})) {
+	if(isset($json->result->parameters->{'poisson'})) {
 		include('commande.php');
 	}
 
 	if(isset($json->result->parameters->{'explorateur'})) {
 		include('gouts.php');
 	}
-*/
+
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
