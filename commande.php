@@ -1,6 +1,6 @@
 <?
 
-	$poisson = $json->result->parameters->poisson;
+	$poisson = $json->result->parameters->{'poisson'};
 	/*$accompagnement = $json->result->parameters->accompagnement;
 	$sauce = $json->result->parameters->sauce;
 	$type = $json->result->parameters->type;
