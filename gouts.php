@@ -10,6 +10,8 @@
 	$speech = "OK. Je crois que je commence à vous cerner...
 	Voilà ma suggestion pour vous : ";
 
+	$proposition = "...";
+
 	if($box == 'oui') {
 		if($thon == 'oui') {
 			$proposition = 'la Sushi Box Salmon Lovers (https://www.sushishop.fr/fr/livraison/plateaux/salmon-lovers-678)';
@@ -23,8 +25,8 @@
 			$proposition = 'notre classique : le sushi saumon';
 		}
 
-	if($epice) {
+	if($epice == 'oui') {
 		$proposition .= ', avec un supplément Wasabi Peas';
 	}
 
-	$speech .= "Est-ce que cela vous correspond ?";
+	$speech .= $proposition . "Est-ce que cela vous correspond ?";
