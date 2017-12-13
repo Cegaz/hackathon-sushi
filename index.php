@@ -14,7 +14,7 @@ if($method = "POST"){
 		include('commande.php');
 	}
 
-	if(isset($json->result->parameters->{'explorateur'})) {
+	if(isset($json->result->parameters->{'nouveaute'})) {
 		include('gouts.php');
 	}
 
