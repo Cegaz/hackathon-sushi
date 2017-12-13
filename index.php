@@ -11,7 +11,8 @@ if($method = "POST"){
 	$commande['sauce'] = $json->result->parameters->sauce;
 	$commande['type'] = $json->result->parameters->type;
 
-	$speech = "j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
+	$speech = "ok commande reçue";
+	//"j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
 
 	$oui_non = $json->result->parameters->oui_non;
 
