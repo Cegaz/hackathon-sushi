@@ -6,32 +6,35 @@ if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$commande['poisson'] = $json->result->parameters->poisson;
-	$commande['accompagnement'] = $json->result->parameters->accompagnement;
-	$commande['sauce'] = $json->result->parameters->sauce;
-	$commande['type'] = $json->result->parameters->type;
+	if(isset($json->result->parameters->poisson)){
+		($commande['poisson'] = $json->result->parameters->poisson;
+		$commande['accompagnement'] = $json->result->parameters->accompagnement;
+		$commande['sauce'] = $json->result->parameters->sauce;
+		$commande['type'] = $json->result->parameters->type;
 
-	$speech = "ok commande reçue";
-	//"j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
+		$speech = "j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
+	}
 
-	$oui_non = $json->result->parameters->oui_non;
+	if(isset($json->result->parameters->oui_non)){
+		$oui_non = $json->result->parameters->oui_non;
 
-	switch ($oui_non) {
-		case 'oui':
-			$speech = 'ok, commençons ensemble';
-			break;
+		switch ($oui_non) {
+			case 'oui':
+				$speech = 'ok, commençons ensemble';
+				break;
 
-		case 'non':
-			$speech = 'c\'est noté, une prochaine fois peut-être';
-			break;
+			case 'non':
+				$speech = 'c\'est noté, une prochaine fois peut-être';
+				break;
 
-		case 'peut-etre':
-			$speech = "ok, je vous laisse réfléchir";
-			break;
-		
-		default:
-			$speech = "je n'ai pas compris votre demande";
-			break;
+			case 'peut-etre':
+				$speech = "ok, je vous laisse réfléchir";
+				break;
+			
+			default:
+				$speech = "je n'ai pas compris votre demande";
+				break;
+		}
 	}
 
 	$response = new \stdClass();
