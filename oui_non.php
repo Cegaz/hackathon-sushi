@@ -4,7 +4,7 @@
 
 	switch ($oui_non) {
 		case 'oui':
-			$speech = 'ok, commençons ensemble';
+			$speech = "ok, commençons ensemble. \n avez-vous l'âme d'un explorateur ?";
 			break;
 
 		case 'non':
