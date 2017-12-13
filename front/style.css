@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+    margin-top: 10%;
+}
+.iframe {
+    margin-left: 10%;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+.flex {
+    display: flex;
+    
+}
+img {
+    height: 430px;
+}
+.black-case {
+    position: absolute;
+    top:125px;
+    left:756px;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid white;
+    height: 135px;
+    width: 350px;
+}
+.logo {
+    position: absolute;
+    top:150px;
+    left:880px;
+    background-color: black;
+    height:100px;
+}
