@@ -1,14 +1,13 @@
 <?
 
-	$nouveaute = $json->result->parameters->{'nouveaute'};
+	/*$nouveaute = $json->result->parameters->{'nouveaute'};
 	$epice = $json->result->parameters->{'epice'};
 	$thon = $json->result->parameters->{'thon'};
 	$box = $json->result->parameters->{'box'};
 	$cher = $json->result->parameters->{'cher'};
+*/
 
-
-	$speech = "OK. Je crois que je commence à vous cerner...
-	Voilà ma suggestion pour vous : ";
+	$speech = "OK. Je crois que je commence à vous cerner... Voilà ma suggestion pour vous : ";
 
 	//$proposition = "...";
 
