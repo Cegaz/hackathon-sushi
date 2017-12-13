@@ -6,7 +6,7 @@ if($method = "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	if(isset($json->result->parameters->oui_non)) {
+	if(isset($json->result->parameters->{'oui_non'})) {
 		include('oui_non.php');
 	}
 
