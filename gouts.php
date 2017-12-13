@@ -13,20 +13,20 @@
 
 	if($box == 'oui') {
 		if($thon == 'oui') {
-			$proposition = 'la Sushi Box Salmon Lovers (https://www.sushishop.fr/fr/livraison/plateaux/salmon-lovers-678)';
+			$proposition = 'la Sushi Box Super Mix';			
 		} else {
-			$proposition = 'la Sushi Box Super Mix (https://www.sushishop.fr/fr/livraison/plateaux/super-mix-1047)';
+			$proposition = 'la Sushi Box Salmon Lovers';
 		}
 	} else {
 		if($nouveaute == 'oui') {
-			$proposition = 'notre nouveauté 2017 : Sushi Black Pepper (https://www.sushishop.fr/fr/livraison/sushi/black-pepper-64)';
+			$proposition = 'notre nouveauté 2017 : Sushi Black Pepper';
 		} else {
 			$proposition = 'notre classique : le sushi saumon';
 		}
 	}
 
 	if($epice == 'oui') {
-		$proposition .= ', avec un supplément Wasabi Peas.';
+		$proposition .= ', avec un supplément Wasabi Peas';
 	}
 
-	$speech .= $proposition . " Est-ce que cela vous correspond ?";
+	$speech .= $proposition . ". Est-ce que cela vous correspond ?";
