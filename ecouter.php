@@ -10,7 +10,7 @@ $ecouter = $json->result->parameters->ecouter;
 
 switch ($ecouter) {
     case 'oui':
-        $speech = 'https://www.youtube.com/watch?v=_Jkla2DZu5g';
+        $speech = 'Je vous recommande notre playslist zen : https://www.youtube.com/watch?v=_Jkla2DZu5g. Bonne écoute !';
         break;
 
     case 'non':
