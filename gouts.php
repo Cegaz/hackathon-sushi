@@ -1,6 +1,6 @@
 <?
 
-	$explorateur = $json->result->parameters->{'explorateur'};
+	$nouveaute = $json->result->parameters->{'nouveaute'};
 	$epice = $json->result->parameters->{'epice'};
 	$thon = $json->result->parameters->{'thon'};
 	$box = $json->result->parameters->{'box'};
