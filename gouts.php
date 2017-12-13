@@ -12,7 +12,7 @@
 
 	$proposition = "...";
 
-	if($box == 'oui') {
+	/*if($box == 'oui') {
 		if($thon == 'oui') {
 			$proposition = 'la Sushi Box Salmon Lovers (https://www.sushishop.fr/fr/livraison/plateaux/salmon-lovers-678)';
 		} else {
@@ -27,6 +27,6 @@
 
 	if($epice == 'oui') {
 		$proposition .= ', avec un supplément Wasabi Peas';
-	}
+	}*/
 
-	$speech .= $proposition . "Est-ce que cela vous correspond ?";
+//	$speech .= $proposition . "Est-ce que cela vous correspond ?";
