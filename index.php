@@ -15,28 +15,26 @@ if($method = "POST"){
 	$speech = "j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
 	}*/
 
-	if(isset($json->result->parameters->oui_non)){
-		$oui_non = $json->result->parameters->oui_non;
+	$oui_non = $json->result->parameters->oui_non;
 
-		switch ($oui_non) {
-			case 'oui':
-				$speech = 'ok, commençons ensemble';
-				break;
+	switch ($oui_non) {
+		case 'oui':
+			$speech = 'ok, commençons ensemble';
+			break;
 
-			case 'non':
-				$speech = 'c\'est noté, une prochaine fois peut-être';
-				break;
+		case 'non':
+			$speech = 'c\'est noté, une prochaine fois peut-être';
+			break;
 
-			case 'peut-etre':
-				$speech = "ok, je vous laisse réfléchir";
-				break;
-			
-			default:
-				$speech = "je n'ai pas compris votre demande";
-				break;
-		}
+		case 'peut-etre':
+			$speech = "ok, je vous laisse réfléchir";
+			break;
+		
+		default:
+			$speech = "je n'ai pas compris votre demande";
+			break;
 	}
-
+	
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
