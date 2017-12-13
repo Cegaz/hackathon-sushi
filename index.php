@@ -10,10 +10,6 @@ if($method = "POST"){
 		include('oui_non.php');
 	}
 
-	/*if(isset($json->result->parameters->{'poisson'})) {
-		include('commande.php');
-	}*/
-
 	if(isset($json->result->parameters->{'epice'})) {
 		include('gouts.php');
 	}
