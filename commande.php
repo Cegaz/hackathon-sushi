@@ -1,8 +1,8 @@
 <?
 
-	$commande['poisson'] = $json->result->parameters->poisson;
-	$commande['accompagnement'] = $json->result->parameters->accompagnement;
-	$commande['sauce'] = $json->result->parameters->sauce;
-	$commande['type'] = $json->result->parameters->type;
+	$poisson = $json->result->parameters->poisson;
+	$accompagnement = $json->result->parameters->accompagnement;
+	$sauce = $json->result->parameters->sauce;
+	$type = $json->result->parameters->type;
 
-	$speech = "j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
+	$speech = "j'ai bien noté votre commande : vous voulez des " $type . " de ". $poisson . " avec du " . $accompagnement . ", sauce " . $sauce . " : c'est bien cela ?";
