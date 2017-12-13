@@ -12,7 +12,6 @@ if($method = "POST"){
 	$commande['type'] = $json->result->parameters->type;
 
 	$speech = "j'ai bien noté votre commande : vous voulez des " $commande['type'] . " de ". $commande['poisson'] . " avec du " . $commande['accompagnement'] . ", sauce " . $commande['sauce'] . " : c'est bien cela ?";
-	}
 
 	$oui_non = $json->result->parameters->oui_non;
 
@@ -33,8 +32,6 @@ if($method = "POST"){
 			$speech = "je n'ai pas compris votre demande";
 			break;
 	}
-
-	$
 
 	$response = new \stdClass();
 	$response->speech = $speech;
