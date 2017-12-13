@@ -14,6 +14,10 @@ if($method = "POST"){
 		include('gouts.php');
 	}
 
+	if(isset($json->result->parameters->ecouter)) {
+		include('ecouter.php');
+	}
+
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
